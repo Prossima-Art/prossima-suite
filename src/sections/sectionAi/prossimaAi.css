@@ -1,0 +1,29 @@
+.textcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: start;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.cardComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  width: 70rem;
+  padding-bottom: 8rem;
+}
+
+.textdecoration {
+  border-radius: 6.1875rem;
+  display: flex;
+  padding: 0.0625rem 1.03344rem 0.14938rem 1.04594rem;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--sucess-color);
+  background: var(--sucess-color-2);
+}

@@ -61,7 +61,7 @@ code {
   font-family: var(--text-font);
   font-size: 2.5rem;
   font-weight: 400;
-  color: var(--text-black-2);
+  color: var(--text-black);
   margin-bottom: 1rem;
 }
 
@@ -69,7 +69,7 @@ code {
   font-family: var(--text-font);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-black-2);
+  color: var(--text-black);
   margin-bottom: 1rem;
 }
 
@@ -79,4 +79,7 @@ code {
   font-weight: 400;
   color: var(--text-black-2);
   margin-bottom: 1rem;
+  
 }
+
+
