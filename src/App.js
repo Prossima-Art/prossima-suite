@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './sections/navbar/navbar';
@@ -10,8 +10,8 @@ function App() {
    <>
    <Navbar/>
    <Hero/>
-   
-   
+
+
    </>
   );
 }

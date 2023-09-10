@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { LogoAi, LogoDev, LogoUx, LogoXr } from "./logos";
-import "./hero.css";
-import VideoPlay from "./videoPlay";
+import "./hero.scss";
+import VideoPlay from "./videoPlay.tsx";
 
 export class Hero extends Component {
   render() {
@@ -18,7 +18,6 @@ export class Hero extends Component {
           </Row>
           <Row className="m-auto">
         <Col>
-        
             <h1>Power your Business Success, Explore the Future with our Resource Suite</h1>
         </Col>
           </Row>
