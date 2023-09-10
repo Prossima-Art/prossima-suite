@@ -1,0 +1,39 @@
+.navparagrafo {
+  font-family: var(--text-font);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-black-2);
+  margin-bottom: 1rem;
+}
+.dropdown-list {
+  position: absolute;
+  top: 3.5rem;
+  background: white;
+  border-radius: 1.875rem;
+  right: 0;
+  padding-block: 1.25rem;
+  padding-inline: 2rem;
+  box-shadow: 10px 10px 53px -7px rgba(0,0,0,0.75);
+  h5 {
+      line-height: 1.4375rem;
+      border-bottom: 0.0625rem solid #E2E5FF;
+      padding-block-end: 0.625rem;
+      margin-block-end: 0.625rem;
+  }
+}
+.dropdown-item {
+  display: flex;
+  gap: 3.75rem;
+
+  .container-list {
+    display: flex;
+    > * {
+      list-style: none;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+  }
+}
