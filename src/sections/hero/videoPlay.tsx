@@ -25,6 +25,8 @@ export default function VideoPlay(): JSX.Element {
         const video = videoRef.current;
         if (video && isPlaying) {
             video.play();
+        } else if (video) {
+            video.pause();
         }
     }, [isPlaying]);
 
@@ -77,12 +79,13 @@ export default function VideoPlay(): JSX.Element {
                     max="1"
                     value={currentTime}
                     onChange={handleSliderChange}
-                    style={{ width: '80%' }}
                     step="0.01"
                     className="play-container_slider-video-range"
                     ref={sliderRef}
+                    placeholder='input slider'
                 />
             </div>
         </div>
     );
 }
+
