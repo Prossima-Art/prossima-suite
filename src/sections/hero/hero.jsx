@@ -7,7 +7,7 @@ import VideoPlay from "./videoPlay.tsx";
 export class Hero extends Component {
   render() {
     return (
-      <Container fluid className="mx-auto heroComp mt-5"xs={12}>
+      <Container fluid className="mx-auto heroComp mt-5 pt-5">
           <Row className="mx-auto" >
         <Col className="logosX">
             <LogoAi/>

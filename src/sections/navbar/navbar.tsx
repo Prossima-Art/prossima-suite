@@ -43,10 +43,11 @@ enum DropDown {
 };
 
 const iconsList = {
-  ia: (<svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6.88303 6.00018H10.4128L17.3179 21.4429H13.5675L8.62447 9.51007L3.66213 21.4429H0L6.88303 6.00018Z" fill="#0068FF" />
-    <path d="M19.1705 6L22.7444 6.00027V21.4429H19.1705V6Z" fill="#0068FF" />
-  </svg>
+  ia: (
+    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.88303 6.00018H10.4128L17.3179 21.4429H13.5675L8.62447 9.51007L3.66213 21.4429H0L6.88303 6.00018Z" fill="#0068FF" />
+      <path d="M19.1705 6L22.7444 6.00027V21.4429H19.1705V6Z" fill="#0068FF" />
+    </svg>
   ),
   dev: (
     <svg width="48" height="15" viewBox="0 0 48 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +79,7 @@ function Header() {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary pe-5 ps-5 ">
+      <Navbar expand="lg" className="bg-body-tertiary pe-5 ps-5 fixed-top">
         <Container fluid>
           <Navbar.Brand href="#">
             <Logo />

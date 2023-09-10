@@ -30,6 +30,16 @@ export default function VideoPlay(): JSX.Element {
         }
     }, [isPlaying]);
 
+    // WARNING: autoplay
+    // useEffect(() => {
+    //     const video = videoRef.current;
+    //     if (video) {
+    //       video.play().then(() => {
+    //         setIsPlaying(true);
+    //       });
+    //     }
+    //   }, []);
+
     const toggleVideoPlay = (): void => {
         setIsPlaying(prevIsPlaying => !prevIsPlaying);
     };
