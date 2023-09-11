@@ -82,4 +82,24 @@ code {
   
 }
 
+.paragrafoBlack{
+  font-family: var(--text-font);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-black);
+  margin-bottom: 1rem;
+  
+}
+
+
+.smalltext{
+  font-family: var(--text-font);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-black-2);
+  margin-bottom: 1rem;
+  
+}
+
+
 
