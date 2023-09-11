@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Logo } from '../../logo';
 import './navbar.scss';
 
@@ -34,7 +33,37 @@ const dropdownItems = {
       "User Testing",
     ],
   },
+  industries: {
+    first: [
+      "E-commerce",
+      "Professional services",
+      "Technology",
+      "Sales"
+    ],
+    center: [
+      "Marketing",
+      "Retail"
+    ],
+    end: [
+      "Marketing",
+      "Retail"
+    ]
+  },
+  resources: [
+    {
+      title: "Research and Dissemination",
+      description: "News and articles about products and services"
+    },
+    {
+      title: "Security",
+      description: "Protection of your data"
+    },
+    {
+      title: "support",
+    },
+  ]
 };
+
 
 enum DropDown {
   SOLUTIONS = "Solutions",
@@ -72,9 +101,25 @@ const iconsList = {
 
 function Header() {
   const [showSolutionsItems, setShowSolutionsItems] = useState(false);
+  const [showIndustriesItems, setShowIndustriesItems] = useState(false);
+  const [showResourcesItems, setShowResourcesItems] = useState(false);
+
 
   const handleSolutionsClick = () => {
     setShowSolutionsItems(!showSolutionsItems);
+    setShowIndustriesItems(false);
+    setShowResourcesItems(false);
+  };
+
+  const handleIndustriesClick = () => {
+    setShowIndustriesItems(!showIndustriesItems);
+    setShowSolutionsItems(false);
+    setShowResourcesItems(false);
+  };
+  const handleResourcesClick = () => {
+    setShowResourcesItems(!showResourcesItems);
+    setShowSolutionsItems(false);
+    setShowIndustriesItems(false);
   };
 
   return (
@@ -88,10 +133,10 @@ function Header() {
           <Navbar.Collapse id="navbarScroll" className="justify-content-end">
             <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
               <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
-                Solutions
+                {DropDown.SOLUTIONS}
               </Nav.Link>
               {showSolutionsItems && (
-                <div className='dropdown-list'>
+                <div className='dropdown-list solutions'>
                   <h5>{DropDown.SOLUTIONS}</h5>
                   <div className="dropdown-item">
                     {Object.keys(dropdownItems.solutions).map((key) => (
@@ -107,24 +152,50 @@ function Header() {
                   </div>
                 </div>
               )}
-              <Nav.Link className='ms-5 position-relative' href="#action2">
-                Industries
+              <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleIndustriesClick}>
+                {DropDown.INDUSTRIES}
               </Nav.Link>
+              {showIndustriesItems && (
+                <div className='dropdown-list'>
+                  <h5>{DropDown.INDUSTRIES}</h5>
+                  <div className="dropdown-item">
+                    {Object.keys(dropdownItems.industries).map((key) => (
+                      <div className="container-list" key={key}>
+                        <ul>
+                          {dropdownItems.industries[key].map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-              <NavDropdown className='ms-5 position-relative' title="Resources" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">
-                  Research and Dissemination
-                  <p className='navparagrafo'>News and articles about products and services</p>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Security
-                  <p className='navparagrafo'>Protection of your data</p>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Customer support
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleResourcesClick}>
+                {DropDown.INDUSTRIES}
+              </Nav.Link>
+              {showResourcesItems && (
+                <div className='dropdown-list'>
+                  <h5>{DropDown.RESOURCES}</h5>
+                  <div className="dropdown-item industries">
+                    {Object.keys(dropdownItems.resources).map((key) => (
+                      <div className="container-list industries" key={key}>
+                        <ul>
+                          <li>
+                            <span className='resources-title'>
+                              {dropdownItems.resources[key].title}
+                            </span>
+                            <span className='resources-description'>
+                              {dropdownItems.resources[key].description}
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </Nav>
             <Button className='ms-5 position-relative rounded-5' variant="primary">
               Contact sales
