@@ -173,7 +173,7 @@ function Header() {
               )}
 
               <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleResourcesClick}>
-                {DropDown.INDUSTRIES}
+                {DropDown.RESOURCES}
               </Nav.Link>
               {showResourcesItems && (
                 <div className='dropdown-list'>
