@@ -16,12 +16,15 @@
   padding-inline: 2rem;
   box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.10);
   margin-inline-end: 1.875rem;
+  flex-grow: 1;
+  min-width: 220px;
 
   &.solutions {
     right: 10%;
 
     .dropdown-item {
       gap: 8rem;
+      flex-wrap: wrap;
     }
   }
 
@@ -56,6 +59,7 @@
 
   .container-list {
     display: flex;
+    gap: 1rem;
 
     >* {
       list-style: none;
