@@ -9,6 +9,7 @@ import ProssimaDev from './sections/sectionDev/prossimaDev';
 import ProssimaXr from './sections/sectionXr/prossimaXr';
 import ProssimaUx from './sections/sectionUx/prossimaUx';
 import Footer from './sections/footer/footer';
+import FaqSection from './sections/faq/faqSection';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
    <ProssimaDev/>
    <ProssimaUx/>
    <ProssimaXr/>
+   <FaqSection/>
    <Footer/>
 
 
