@@ -1,0 +1,31 @@
+.hero-industries {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    background-color: #008080;
+
+    .redirect-vide {
+        position: absolute;
+        background-color: aqua;
+        width: 9rem;
+        aspect-ratio: 1;
+        margin-block-start: 35px;
+        margin-inline-start: 30px;
+    }
+
+    .go-to {
+        position: absolute;
+        background-color: aqua;
+        bottom: 0;
+        width: 8.125rem;
+        aspect-ratio: 1;
+        right: 35px;
+        margin-block-end: 35px;
+    }
+
+    .content-center {
+        display: grid;
+        place-items: center;
+        height: 100%;
+    }
+}

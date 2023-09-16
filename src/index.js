@@ -6,6 +6,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import UxView from "./views/UxView.tsx"
+import IndustriesView from "./views/IndustriesView.tsx"
 import './index.css';
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     {
         path: "/ux",
         element: <UxView />,
+    },
+    {
+        path: "/industries",
+        element: <IndustriesView />,
     },
     {
         path: "/*",
