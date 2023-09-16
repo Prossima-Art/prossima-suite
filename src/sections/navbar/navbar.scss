@@ -84,3 +84,9 @@
 ul {
   padding: 0;
 }
+.mobile-menu {
+  height: 100vh;
+  a, button {
+    margin: 0 !important; //todo: remove this
+  }
+}

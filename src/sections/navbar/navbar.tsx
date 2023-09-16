@@ -214,7 +214,7 @@ function Header() {
               </Button>
             </Navbar.Collapse>)}
           {size.x < mobileSize && (
-            <Navbar.Collapse id="navbarScroll" className="justify-content-end">
+            <Navbar.Collapse id="navbarScroll" className="justify-content-end mobile-menu">
               <Nav className="my-2 my-lg-0" navbarScroll>
                 <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
                   <h5 className='border-bottom'>{DropDown.SOLUTIONS}</h5>
@@ -240,6 +240,9 @@ function Header() {
                     ))}
                   </ul>
                 </Nav.Link>
+                <Button className='ms-5 position-relative rounded-5' variant="primary">
+                  Contact sales
+                </Button>
               </Nav>
             </Navbar.Collapse>
           )}
