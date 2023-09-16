@@ -11,7 +11,6 @@ import ProssimaUx from './sections/sectionUx/prossimaUx';
 import Footer from './sections/footer/footer';
 import FaqSection from './sections/faq/faqSection';
 
-
 function App() {
   return (
    <>
@@ -24,8 +23,6 @@ function App() {
    <ProssimaXr/>
    <FaqSection/>
    <Footer/>
-
-
    </>
   );
 }

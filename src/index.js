@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import UxView from "./views/UxView.tsx"
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App />,
+    },
+    {
+        path: "/ux",
+        element: <UxView />,
+    },
+    {
+        path: "/*",
+        element: <div>page not found, go to home:</div>,
+    },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 );
-
-reportWebVitals();
