@@ -24,11 +24,21 @@
         aspect-ratio: 1;
         right: 35px;
         margin-block-end: 35px;
+        &:hover {
+            animation: spin-go-to 4s linear infinite;
+        }
     }
 
     .content-center {
         display: grid;
         place-items: center;
         height: 100%;
+    }
+}
+
+@keyframes spin-go-to {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
