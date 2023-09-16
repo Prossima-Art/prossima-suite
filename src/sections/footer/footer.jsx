@@ -9,27 +9,38 @@ import {
   EmailIcon,
 } from "./socialIcons";
 import { Logo } from "../../logo";
+import { useState } from "react";
+import { useEffect } from "react";
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <Container fluid className="footer px-5">
+export default function Footer() {
+  const [size, setSize] = useState({
+    x: window.innerWidth,
+    y: window.innerHeight
+  });
+  const updateSize = () =>
+    setSize({
+      x: window.innerWidth,
+      y: window.innerHeight
+    });
+  useEffect(() => (window.onresize = updateSize), []);
+  const mobileSize = 780;
+  return (
+    <Container fluid className="footer">
+      <Row>
+        <Col className={`text-left ${size.x <= mobileSize ? 'mobile' : ''}`} gab={3}>
+          <p>Follow |</p>
+          <InstagramIcon />
+          <LinkedinIcon />
+          <MenssagerIcon />
+          <EmailIcon />
+        </Col>
         <Row>
-          <Col className="text-left" gab={3}>
-            <p>Follow |</p>
-            <InstagramIcon />
-            <LinkedinIcon />
-            <MenssagerIcon />
-            <EmailIcon />
+          <Col className="logo" xs={12}>
+            <Logo />
+            <p className="mx-0">© All Rights Reserved.</p>
           </Col>
-          <Row>
-            <Col className="logo">
-                <Logo/> 
-              <p className="mx-2">© All Rights Reserved.</p>
-            </Col>
-          </Row>
         </Row>
-      </Container>
-    );
-  }
+      </Row>
+    </Container>
+  );
 }

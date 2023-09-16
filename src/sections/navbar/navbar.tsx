@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Logo } from '../../logo';
 import './navbar.scss';
+import { useEffect } from 'react';
 
 const dropdownItems = {
   solutions: {
@@ -41,12 +42,12 @@ const dropdownItems = {
       "Sales"
     ],
     center: [
-      "Marketing",
-      "Retail"
+      "center Marketing",
+      "center Retail"
     ],
     end: [
-      "Marketing",
-      "Retail"
+      "end Marketing",
+      "end Retail"
     ]
   },
   resources: [
@@ -121,86 +122,127 @@ function Header() {
     setShowSolutionsItems(false);
     setShowIndustriesItems(false);
   };
-
+  const [size, setSize] = useState({
+    x: window.innerWidth,
+    y: window.innerHeight
+  });
+  const updateSize = () =>
+    setSize({
+      x: window.innerWidth,
+      y: window.innerHeight
+    });
+  useEffect(() => (window.onresize = updateSize), []);
+  const mobileSize = 780;
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary pe-5 ps-5 fixed-top">
+      <Navbar expand="lg" className={`bg-body-tertiary fixed-top ${size.x >= mobileSize ? 'pe-5 ps-5' : ''}`}>
         <Container fluid>
           <Navbar.Brand href="#">
             <Logo />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-            <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-              <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
-                {DropDown.SOLUTIONS}
-              </Nav.Link>
-              {showSolutionsItems && (
-                <div className='dropdown-list solutions'>
-                  <h5>{DropDown.SOLUTIONS}</h5>
-                  <div className="dropdown-item">
-                    {Object.keys(dropdownItems.solutions).map((key) => (
-                      <div className="container-list" key={key}>
-                        <div className="item">{iconsList[key]}</div>
-                        <ul>
-                          {dropdownItems.solutions[key].map((item) => (
-                            <li key={item}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+          {size.x >= mobileSize && (
+            <Navbar.Collapse id="navbarScroll" className="justify-content-end">
+              <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+                <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
+                  {DropDown.SOLUTIONS}
+                </Nav.Link>
+                {showSolutionsItems && (
+                  <div className='dropdown-list solutions'>
+                    <h5>{DropDown.SOLUTIONS}</h5>
+                    <div className="dropdown-item">
+                      {Object.keys(dropdownItems.solutions).map((key) => (
+                        <div className="container-list" key={key}>
+                          <div className="item">{iconsList[key]}</div>
+                          <ul>
+                            {dropdownItems.solutions[key].map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-              <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleIndustriesClick}>
-                {DropDown.INDUSTRIES}
-              </Nav.Link>
-              {showIndustriesItems && (
-                <div className='dropdown-list'>
-                  <h5>{DropDown.INDUSTRIES}</h5>
-                  <div className="dropdown-item">
-                    {Object.keys(dropdownItems.industries).map((key) => (
-                      <div className="container-list" key={key}>
-                        <ul>
-                          {dropdownItems.industries[key].map((item) => (
-                            <li key={item}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                )}
+                <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleIndustriesClick}>
+                  {DropDown.INDUSTRIES}
+                </Nav.Link>
+                {showIndustriesItems && (
+                  <div className='dropdown-list'>
+                    <h5>{DropDown.INDUSTRIES}</h5>
+                    <div className="dropdown-item">
+                      {Object.keys(dropdownItems.industries).map((key) => (
+                        <div className="container-list" key={key}>
+                          <ul>
+                            {dropdownItems.industries[key].map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleResourcesClick}>
-                {DropDown.RESOURCES}
-              </Nav.Link>
-              {showResourcesItems && (
-                <div className='dropdown-list'>
-                  <h5>{DropDown.RESOURCES}</h5>
-                  <div className="dropdown-item industries">
-                    {Object.keys(dropdownItems.resources).map((key) => (
-                      <div className="container-list industries" key={key}>
-                        <ul>
-                          <li>
-                            <span className='resources-title'>
-                              {dropdownItems.resources[key].title}
-                            </span>
-                            <span className='resources-description'>
-                              {dropdownItems.resources[key].description}
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    ))}
+                <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleResourcesClick}>
+                  {DropDown.RESOURCES}
+                </Nav.Link>
+                {showResourcesItems && (
+                  <div className='dropdown-list'>
+                    <h5>{DropDown.RESOURCES}</h5>
+                    <div className="dropdown-item industries">
+                      {Object.keys(dropdownItems.resources).map((key) => (
+                        <div className="container-list industries" key={key}>
+                          <ul>
+                            <li>
+                              <span className='resources-title'>
+                                {dropdownItems.resources[key].title}
+                              </span>
+                              <span className='resources-description'>
+                                {dropdownItems.resources[key].description}
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </Nav>
-            <Button className='ms-5 position-relative rounded-5' variant="primary">
-              Contact sales
-            </Button>
-          </Navbar.Collapse>
+                )}
+              </Nav>
+              <Button className='ms-5 position-relative rounded-5' variant="primary">
+                Contact sales
+              </Button>
+            </Navbar.Collapse>)}
+          {size.x < mobileSize && (
+            <Navbar.Collapse id="navbarScroll" className="justify-content-end">
+              <Nav className="my-2 my-lg-0" navbarScroll>
+                <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
+                  <h5 className='border-bottom'>{DropDown.SOLUTIONS}</h5>
+                  <ul>
+                    {Object.keys(dropdownItems.solutions).map((key) => (
+                      <li key={key}>{dropdownItems.solutions[key]}</li>
+                    ))}
+                  </ul>
+                </Nav.Link>
+                <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
+                  <h5 className='border-bottom'>{DropDown.INDUSTRIES}</h5>
+                  <ul>
+                    {Object.keys(dropdownItems.industries).map((key) => (
+                      <li key={key}>{dropdownItems.industries[key]}</li>
+                    ))}
+                  </ul>
+                </Nav.Link>
+                <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
+                  <h5 className='border-bottom'>{DropDown.RESOURCES}</h5>
+                  <ul>
+                    {(dropdownItems.resources).map((key) => (
+                      <li key={key.title}>{key.title} {key.description}</li>
+                    ))}
+                  </ul>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          )}
         </Container>
       </Navbar>
 

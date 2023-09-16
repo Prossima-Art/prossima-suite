@@ -8,16 +8,18 @@
     width: 100%;
     height: auto;
   }
-  
+  .textcardDev > * {
+    max-width: 32.75rem;
+    min-width: 5rem;
+  }
+
   .cardCompDev {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    width: 70rem;
-    padding-bottom: 8rem;
   }
-  
+
   .textdecorationDev {
     border-radius: 6.1875rem;
     display: flex;
@@ -27,4 +29,3 @@
     color: var(--error-color);
     background: var(--error-color-2);
   }
-  

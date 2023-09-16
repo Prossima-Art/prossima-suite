@@ -67,8 +67,6 @@ export default function VideoPlay(): JSX.Element {
     return (
         <div>
             <video
-                width="650"
-                height="370"
                 className="video"
                 autoPlay
                 ref={videoRef}

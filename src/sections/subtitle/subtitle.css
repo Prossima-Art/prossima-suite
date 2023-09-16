@@ -6,6 +6,6 @@
   text-align: center;
   margin: auto;
   margin-top: 8rem;
-  width: 55.375rem;
+  max-width: 55.375rem;
   gap: 1.5rem;
 }
