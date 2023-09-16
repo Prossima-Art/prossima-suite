@@ -1,16 +1,19 @@
 .hero-industries {
     position: relative;
-    width: 100vw;
+    width: 95%;
     height: 600px;
     background-color: #008080;
+    margin-block-start: 6rem;
+    margin-inline: 2%;
+    border-radius: 35px;
 
     .redirect-vide {
         position: absolute;
         background-color: aqua;
         width: 9rem;
         aspect-ratio: 1;
-        margin-block-start: 35px;
-        margin-inline-start: 30px;
+        margin-block-start: 2.1875rem;
+        margin-inline-start: 1.875rem;
     }
 
     .go-to {
