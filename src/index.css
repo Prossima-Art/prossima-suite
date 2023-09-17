@@ -29,6 +29,8 @@ code {
   --text-black: #110E3D;
   --text-black-2: #7F7B7B;
 
+
+
   --sucess-color: #6CBF84;
   --sucess-color-2: rgba(108, 191, 132, 0.15);
 
@@ -40,6 +42,13 @@ code {
 
   --info-color: #5682F2;
   --info-color-2: rgba(86, 130, 242, 0.15);
+
+
+  --purple-color: #9747FF;
+  --purple-color-2: rgba(118, 44, 230, 0.15);
+
+  --gray-color: #595858;
+  --gray-color-2: rgba(83, 83, 83, 0.15);
 
 
   --text-font: 'Inter', sans-serif;

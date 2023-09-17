@@ -184,7 +184,7 @@ function Header() {
                   </div>
                 )}
 
-                <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleResourcesClick}>
+                <Nav.Link className='ms-5 position-relative' href="/Security" onClick={handleResourcesClick}>
                   {DropDown.RESOURCES}
                 </Nav.Link>
                 {showResourcesItems && (
