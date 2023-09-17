@@ -1,0 +1,42 @@
+.containerComp {
+  position: relative;
+  padding-left: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  align-self: stretch;
+  height: 19rem;
+}
+
+.colComp {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.typography {
+  color: rgba(17, 14, 61, 0.1);
+  font-family: Inter;
+  font-size: 7.90313rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.08025rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  padding-left: 4rem;
+  position: relative;
+}
+.position {
+  position: absolute;
+  top: 25%;
+}

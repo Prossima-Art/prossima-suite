@@ -2,6 +2,9 @@ import React from "react";
 import "./components/industries/style.scss"
 import Hero from "./components/industries/HeroView.tsx"
 import Navbar from '../sections/navbar/navbar.tsx';
+import { Ecommerce, Education, Finance, Food, Healthcare, SaaS } from "./components/industries/infoTitle/info";
+import { InfoTextEcommerce, InfoTextEducation, InfoTextFinance, InfoTextFood, InfoTextSaaS, InfoTexthealthcare } from "./components/industries/infoText/infoText";
+
 
 function IndustriesView() {
     const heroText = "Productivity and Efficiency tools for all companies."
@@ -10,6 +13,18 @@ function IndustriesView() {
         <>
             <Navbar />
             <Hero />
+            <Ecommerce/>
+            <InfoTextEcommerce/>
+            <Finance/>
+            <InfoTextFinance/>
+            <Healthcare/>
+            <InfoTexthealthcare/>
+            <Education/>
+            <InfoTextEducation/>
+            <Food/>
+            <InfoTextFood/>
+            <SaaS/>
+            <InfoTextSaaS/>
         </>
     );
 }

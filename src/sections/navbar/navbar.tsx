@@ -132,7 +132,7 @@ function Header() {
       y: window.innerHeight
     });
   useEffect(() => (window.onresize = updateSize), []);
-  const mobileSize = 780;
+  const mobileSize = 991;
   return (
     <>
       <Navbar expand="lg" className={`bg-body-tertiary fixed-top ${size.x >= mobileSize ? 'pe-5 ps-5' : ''}`}>
@@ -143,7 +143,7 @@ function Header() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           {size.x >= mobileSize && (
             <Navbar.Collapse id="navbarScroll" className="justify-content-end">
-              <Nav className="my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+              <Nav className="my-2 my-lg-0" style={{ maxHeight: '200px' }} navbarScroll>
                 <Nav.Link className='ms-5 position-relative' href="#action1" onClick={handleSolutionsClick}>
                   {DropDown.SOLUTIONS}
                 </Nav.Link>
@@ -164,7 +164,7 @@ function Header() {
                     </div>
                   </div>
                 )}
-                <Nav.Link className='ms-5 position-relative' href="#action2" onClick={handleIndustriesClick}>
+                <Nav.Link className='ms-5 position-relative' href="/industries" onClick={handleIndustriesClick}>
                   {DropDown.INDUSTRIES}
                 </Nav.Link>
                 {showIndustriesItems && (
