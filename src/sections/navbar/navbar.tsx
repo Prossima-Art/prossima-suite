@@ -58,6 +58,7 @@ const dropdownItems = {
     {
       title: "Security",
       description: "Protection of your data"
+      
     },
     {
       title: "support",
@@ -137,7 +138,7 @@ function Header() {
     <>
       <Navbar expand="lg" className={`bg-body-tertiary fixed-top ${size.x >= mobileSize ? 'pe-5 ps-5' : ''}`}>
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <Logo />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -164,12 +165,12 @@ function Header() {
                     </div>
                   </div>
                 )}
-                <Nav.Link className='ms-5 position-relative' href="/industries" onClick={handleIndustriesClick}>
+                <Nav.Link className='ms-5 position-relative'  onClick={handleIndustriesClick}>
                   {DropDown.INDUSTRIES}
                 </Nav.Link>
                 {showIndustriesItems && (
                   <div className='dropdown-list'>
-                    <h5>{DropDown.INDUSTRIES}</h5>
+                    <a href="/industries">{DropDown.INDUSTRIES}</a>
                     <div className="dropdown-item">
                       {Object.keys(dropdownItems.industries).map((key) => (
                         <div className="container-list" key={key}>
@@ -184,7 +185,7 @@ function Header() {
                   </div>
                 )}
 
-                <Nav.Link className='ms-5 position-relative' href="/Security" onClick={handleResourcesClick}>
+                <Nav.Link className='ms-5 position-relative' onClick={handleResourcesClick}>
                   {DropDown.RESOURCES}
                 </Nav.Link>
                 {showResourcesItems && (
@@ -195,9 +196,9 @@ function Header() {
                         <div className="container-list industries" key={key}>
                           <ul>
                             <li>
-                              <span className='resources-title'>
+                              <a  href="/Security" className='resources-title'>
                                 {dropdownItems.resources[key].title}
-                              </span>
+                              </a>
                               <span className='resources-description'>
                                 {dropdownItems.resources[key].description}
                               </span>
