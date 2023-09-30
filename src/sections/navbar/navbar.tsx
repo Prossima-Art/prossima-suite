@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Logo } from '../../logo';
 import './navbar.scss';
 import { useEffect } from 'react';
+import { ModalContato } from '../offcanvas/Offcanvas';
 
 const dropdownItems = {
   solutions: {
@@ -42,12 +43,12 @@ const dropdownItems = {
       "Sales"
     ],
     center: [
-      "center Marketing",
-      "center Retail"
+      "Marketing",
+      "Retail"
     ],
     end: [
-      "end Marketing",
-      "end Retail"
+      "Marketing",
+      "Retail"
     ]
   },
   resources: [
@@ -210,9 +211,8 @@ function Header() {
                   </div>
                 )}
               </Nav>
-              <Button className='ms-5 position-relative rounded-5' variant="primary">
-                Contact sales
-              </Button>
+              <ModalContato/>
+              
             </Navbar.Collapse>)}
           {size.x < mobileSize && (
             <Navbar.Collapse id="navbarScroll" className="justify-content-end mobile-menu">

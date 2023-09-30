@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+
 const VideoURL: string =
-    'https://s3-figma-videos-production-sig.figma.com/video/835212680197847456/TEAM/bd87/629b/-dbdf-41cf-b206-74795975c7d4?Expires=1694995200&Signature=nJq-Hg1g~KwTSsS-V9bOVLipIIiAW3M2QetVy53ga~Bamy-yMKK~5DD71nHUhq9uK0u5gGtGicQlPby4mJyfIRsFP8wkK-pGBTaYq-2fOYi-~ap3dhXSsX49zTWzOn5HPm9tuBEwwYts8-QdAGeMCXFPibD0ilT6rfK6mXxnWqS4nfYK2VGyCr2GHykUKX0mKHUvv47tdDPL~lNojBom0YfB5incF6VoM4qYvLhov-WpdCakB0pGDAxONKRfV9AXzF7iJh9d6TVcb0N0-nm~HWHAAe~2MIZjT-yRHhxqZDzSzbzSf6ybfYp6Rx9JA-CBBrBhJ8xjuRuloveI3WcZZg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4';
+    'https://drive.google.com/file/d/1ds-HGBZxMBabBLIjAfhy_uiPtdEJCZ7s/view?usp=sharing';
 
 const PlayButton: JSX.Element = (
     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
