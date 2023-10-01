@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 
 const VideoURL: string =
-    'https://drive.google.com/file/d/1ds-HGBZxMBabBLIjAfhy_uiPtdEJCZ7s/view?usp=sharing';
+    'https://drive.google.com/uc?id=/1ds-HGBZxMBabBLIjAfhy_uiPtdEJCZ7s';
 
 const PlayButton: JSX.Element = (
     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -76,7 +76,7 @@ export default function VideoPlay(): JSX.Element {
                 onPause={() => setIsPlaying(false)}
                 onClick={toggleVideoPlay}
             >
-                <source src={VideoURL} type="video/mp4" />
+                <source src="https://drive.google.com/uc?id=1ds-HGBZxMBabBLIjAfhy_uiPtdEJCZ7s" type="video/mp4" />
             </video>
             <div className="play-container">
                 <button className="play-container_button" onClick={toggleVideoPlay}>
