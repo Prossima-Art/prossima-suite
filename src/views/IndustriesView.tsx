@@ -1,6 +1,6 @@
 import React from "react";
 import "./components/industries/style.scss"
-import Hero from "./components/industries/HeroView.tsx"
+import Hero from "./components/industries/HeroView"
 
 import { Ecommerce, Education, Finance, Food, Healthcare, SaaS } from "./components/industries/infoTitle/info";
 import { InfoTextEcommerce, InfoTextEducation, InfoTextFinance, InfoTextFood, InfoTextSaaS, InfoTexthealthcare } from "./components/industries/infoText/infoText";
