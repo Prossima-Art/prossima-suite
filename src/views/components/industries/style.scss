@@ -2,14 +2,15 @@
     position: relative;
     width: 95%;
     height: 600px;
-    background-color: #008080;
+    background-image: url("https://drive.google.com/file/d/1FP4d7WZSo9R6J_Wzqz3HOQaLMrOc_rYi/view?usp=sharing");
+    background-size: cover;
     margin-block-start: 6rem;
     margin-inline: 2%;
     border-radius: 35px;
 
     .redirect-vide {
         position: absolute;
-        background-color: aqua;
+        background-image: url("../assets/tumbnail.png");
         width: 9rem;
         aspect-ratio: 1;
         margin-block-start: 2.1875rem;
