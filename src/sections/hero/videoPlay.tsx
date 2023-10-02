@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-
-const VideoURL: string =
-    'https://drive.google.com/uc?id=/1ds-HGBZxMBabBLIjAfhy_uiPtdEJCZ7s';
-
 const PlayButton: JSX.Element = (
     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
         <path d="M6.5 19.3229H10.5V5.32294H6.5V19.3229ZM14.5 5.32294V19.3229H18.5V5.32294H14.5Z" fill="#0068FF" />
