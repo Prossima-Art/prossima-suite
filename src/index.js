@@ -6,7 +6,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import IndustriesView from "./views/IndustriesView.tsx"
+import IndustriesView from "./views/IndustriesView.jsx"
 import './index.css';
 import Security from './views/Security.tsx';
 

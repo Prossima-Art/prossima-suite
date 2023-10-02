@@ -89,40 +89,40 @@ const Navbar = () => {
     Industries: [
       {
         name: "E-commerce and retail",
-        href: "/industries",
+        href: "/industries#Ecommerce",
       },
       {
         name: "Professional services",
-        href: "/industries",
+        href: "/industries#Ecommerce",
       },
 
       {
         name: "Technology and SaaS",
-        href: "/industries",
+        href: "/industries#Saas",
       },
       {
         name: "Marketing",
-        href: "/industries",
+        href: "/industries#Ecommerce",
       },
       {
         name: "Food services",
-        href: "/industries",
+        href: "/industries#FoodService",
       },
       {
         name: "Healthcare",
-        href: "/industries",
+        href: "/industries#Healthcare",
       },
       {
         name: "Education",
-        href: "/industries",
+        href: "/industries#Finance",
       },
       {
         name: "Customer service",
-        href: "/industries",
+        href: "/industries#Saas",
       },
       {
         name: "Finance and banking",
-        href: "/industries",
+        href: "/industries#Finance",
       },
     ],
     Resources: [

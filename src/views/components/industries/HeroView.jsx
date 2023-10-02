@@ -6,7 +6,7 @@ function IndustriesView() {
     return (
         <>
             <div className="hero-industries">
-                <div className="redirect-vide">go</div>
+                <div className="redirect-vide"></div>
                 <a className="go-to" href="https://youtu.be/u7dtZ9tL_k4?si=rSGvrdI0ekJWlkSC" target="_black" rel="noopener noreferrer " ><img src={IconText}></img></a>
                 <div className="content-center">
                     <h1>{heroText}</h1>
