@@ -84,7 +84,7 @@ export const InfoTextEcommerce = () => {
         </Col>
         <Col>
           <img src={Vr} alt="Vr" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             In the dynamic world of e-commerce and retail, the utilization of
             advanced technologies is becoming increasingly vital. Web
@@ -149,7 +149,7 @@ export const InfoTextFinance = () => {
         </Col>
         <Col>
           <img src={FinanceVr} alt="Vr tecnologies" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             XR tools, including Virtual Reality (VR), Augmented Reality (AR),
             and Mixed Reality (MR), are reshaping the way financial services are
@@ -208,7 +208,7 @@ export const InfoTexthealthcare = () => {
         </Col>
         <Col>
           <img src={HealthVr} alt="Vr tecnologies" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             VR simulations allow medical professionals to practice complex
             procedures in a safe and controlled environment, while AR tools can
@@ -274,7 +274,7 @@ export const InfoTextEducation = () => {
         </Col>
         <Col>
           <img src={EducationVr} alt="Vr tecnologies" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             XR tools, including Virtual Reality (VR), Augmented Reality (AR),
             and Mixed Reality (MR), are revolutionizing the way we experience
@@ -334,7 +334,7 @@ export const InfoTextFood = () => {
         </Col>
         <Col>
           <img src={FoodVr} alt="Vr tecnologies" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             XR tools, such as Augmented Reality (AR) and Virtual Reality (VR),
             are enhancing the dining experience by offering immersive and
@@ -389,7 +389,7 @@ export const InfoTextSaaS = () => {
         </Col>
         <Col>
           <img src={SaaSVr} alt="Vr tecnologies" className="dev" />
-          <p className="subtitle">Web development</p>
+          <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             XR tools, including Virtual Reality (VR), Augmented Reality (AR),
             and Mixed Reality (MR), are reshaping the way SaaS products are
