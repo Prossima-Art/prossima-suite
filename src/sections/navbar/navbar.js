@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./navbar.css";
 import { Logo } from "../../logo";
 import { HamburgerIcon, AiIcon, DevIcon, UxIcon, XrIcon } from "./IconsHeader";
+import { ModalContato } from "../offcanvas/Offcanvas";
 
 const DropDown = {
   Solutions: "Solutions",
@@ -210,7 +211,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-      <button className="navbar-contact-btn">Contact</button>
+      <ModalContato/>
 
       <div
         ref={refSolutions}

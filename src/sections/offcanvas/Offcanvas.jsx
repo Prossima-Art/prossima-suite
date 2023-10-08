@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Logo } from '../../logo';
+import React, { useEffect, useState } from "react";
+import { Logo } from "../../logo";
 
-import { Button, Offcanvas, Form, Row } from "react-bootstrap";
+import { Button, Offcanvas, Form } from "react-bootstrap";
+import axios from "axios";
 
 export function ModalContato() {
   return (
@@ -19,18 +20,45 @@ export function OffCanvasExample({ ...props }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [inputName, setInputName] = useState("");
-  const [inputEmail, setInputEmail] = useState("");
+  const [Contacts, setContacts] = useState([]);
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
 
-  function send2DB() {
-    console.log(inputName);
-    console.log(inputEmail);
-  }
+  const getContacts = async () => {
+    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`)
+    .then((response) => response.data)
+    .catch((error) => console.log(error));
+
+    setContacts(data);
+  };
+
+  const addNewContacts = async () => {
+    if (!Name || !Email) {
+      return alert("Preencha os campos !");
+    }
+    const data = { Name, Email };
+
+    const { data: newContacts} = await axios.post(
+      `https://prossima-be.vercel.app/contacts`,
+      data
+    )
+    .then((response) => response.data)
+    .catch((error) => console.log(error))
+    ;
+
+    setContacts([...Contacts, newContacts]);
+    setName("");
+    setEmail("");
+  };
+
+  useEffect(() => {
+    getContacts();
+  }, []);
 
   return (
     <>
-      <Button variant="primary" className="ms-5 position-relative rounded-5" onClick={handleShow}>
-      Contact sales
+      <Button variant="primary" className="rounded-5" onClick={handleShow}>
+        Contact Us
       </Button>
 
       <Offcanvas
@@ -56,55 +84,59 @@ export function OffCanvasExample({ ...props }) {
             forward to hearing from you!
           </p>
 
-          <Form className="mb-5">
-            <Form.Group
-              className="row-md-2 mx-2"
-              controlId="form.ControlInputName"
-            >
-              <Form.Label column sm="4">
+          <Form className="mb-5" onSubmit={addNewContacts}>
+            <Form.Group className="row-md-2 mx-2">
+              <Form.Label for="name" column sm="4">
                 Your name
               </Form.Label>
               <Form.Control
                 className="rounded-5 mb-3"
                 as="input"
                 placeholder="your name"
+                type="text"
+                id="name"
+                name="name"
+                required=""
                 rows={2}
-                value={inputName}
-                onChange={(e) => setInputName(e.target.value)}
+                value={Name}
+                onChange={(e) => setName(e.target.value)}
               />
             </Form.Group>
-            <Form.Group
-              className="row-md-3 mx-2 "
-              controlId="from.ControlInputEmail"
-            >
-              <Form.Label column sm="4">
+            <Form.Group className="row-md-3 mx-2 ">
+              <Form.Label column sm="4" for="email">
                 Email address
               </Form.Label>
               <Form.Control
-                className="rounded-5"
+                className="rounded-5  mb-4"
                 type="email"
                 placeholder="name@example.com"
-                value={inputEmail}
-                onChange={(e) => setInputEmail(e.target.value)}
+                id="email"
+                name="email"
+                required=""
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
+            <Button
+              className="rounded-5"
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+              }}
+              variant="primary"
+              type="submit"
+              // onClick={() => send2DB(Name, Email)}
+            >
+              Join The Waitlist!
+            </Button>
           </Form>
-          <Button
-            className="rounded-5"
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-            }}
-            variant="primary"
-            type="submit"
-            onClick={send2DB}
-          >
-            Join The Waitlist!
-          </Button>
         </Offcanvas.Body>
-        <p  class="text-secondary text-center mb-5">
-          Prefer email? <a href="mailto:prossima.art@gmail.com" class="text-primary">prossima.art@gmail.com </a>
+        <p class="text-secondary text-center mb-5">
+          Prefer email?{" "}
+          <a href="mailto:prossima.art@gmail.com" class="text-primary">
+            prossima.art@gmail.com{" "}
+          </a>
         </p>
       </Offcanvas>
     </>
