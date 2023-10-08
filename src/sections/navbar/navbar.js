@@ -296,7 +296,7 @@ const Navbar = () => {
                 key={item.name}
                 style={{ paddingBottom: "1rem", color: "#222" }}
               >
-                <a
+                <a 
                   href={item.href}
                   style={{ textDecoration: "none", color: "#222" }}
                 >
