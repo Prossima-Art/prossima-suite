@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: relative;
   display: grid;
   align-items: end;
   padding: 1rem 2rem;
@@ -59,13 +59,12 @@
 }
 
 .navbar-flyout-menu {
-  position: relative;
+  position: absolute;
   z-index: 1;
   display: none;
   grid-column: 2/6;
-  position: relative;
   width: 100%;
-  top: 1rem;
+  top: 4rem;
   margin: auto;
   border-radius: 1.25rem;
   background: white;

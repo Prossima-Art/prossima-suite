@@ -9,6 +9,8 @@ import {
 import IndustriesView from "./views/IndustriesView.jsx"
 import './index.css';
 import Security from './views/Security.tsx';
+import BlogView from './views/BlogView';
+
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
         path: "/industries",
         element: <IndustriesView />,
     },
+    {
+        path: "/BlogHome",
+        element: <BlogView />,
+    },
+
     {
         path: "/*",
         element: <div>page not found, go to home:</div>,

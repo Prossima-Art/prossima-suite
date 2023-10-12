@@ -130,7 +130,7 @@ const Navbar = () => {
       {
         name: "Research and Dissemination",
         description: "News and articles about products and services",
-        href: "#",
+        href: "/BlogHome",
       },
       {
         name: "Security",
@@ -198,7 +198,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Logo/>
+       <a href="/"><Logo/>
+        </a> 
       </div>
       {!isMobile && (
         <ul
@@ -231,6 +232,7 @@ const Navbar = () => {
               <a
                 href={item.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 key={item.name}
                 className="d-flex flex-row"
                 style={{ textDecoration: "none", color: "#222" }}
