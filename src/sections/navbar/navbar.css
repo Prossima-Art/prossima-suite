@@ -24,7 +24,7 @@
 
   height: 20px;
   width: auto;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   grid-column: 3/5;
   list-style-type: none;
-  justify-content: end;
+  justify-content: flex-end;
   height: auto;
   margin: 0;
   padding: 0;
@@ -151,7 +151,7 @@
   }
   .navbar-contact-btn {
     width: 6rem;
-    align-items: end;
+    align-items: flex-end;
     grid-column: 4/6;
   }
   .hamburger-menu {
@@ -178,7 +178,7 @@
   }
   .hamburger-menu-item {
     display: grid;
-    justify-content: end;
+    justify-content: flex-end;
     grid-column: 5/5;
   }
 

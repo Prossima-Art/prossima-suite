@@ -1,5 +1,7 @@
 import React from "react";
 import { Blogdata } from "./Blog/BlogPost";
+import { Link } from 'react-router-dom';
+
 
 const BlogPost = () => {
   return (
@@ -7,25 +9,25 @@ const BlogPost = () => {
       {/* Destaque */}
       <div className="mx-5 mt-5">
         {Blogdata.Destaque.map((data) => (
-          <div class="card mb-3 border-0 " >
-          <div class="row g-0 mx-auto">
-            <div class="col-md-4 align-items-center d-flex">
-              <div class="card-body">
-                <h5 class="card-title">{data.title}</h5>
-                <p class="card-text">{data.subtitle}</p>
-                <p class="card-text"><small class="text-muted">{data.date}</small></p>
-                <a href={data.href}
+          <div className="card mb-3 border-0 " >
+          <div className="row g-0 mx-auto">
+            <div className="col-md-4 align-items-center d-flex">
+              <div className="card-body">
+                <h5 className="card-title">{data.title}</h5>
+                <p className="card-text">{data.subtitle}</p>
+                <p className="card-text"><small className="text-muted">{data.date}</small></p>
+                <Link to={`/BlogArticle?id=${data.id}&image=${data.image}&title=${data.title}&subtitle=${data.subtitle}&content=${data.content}&date=${data.date}`} 
                 className="link-primary"
                 style={{
                   textDecoration: "none",
                  
                 }}
                 >
-                  {data.button}</a>
+                  {data.button}</Link>
               </div>
             </div>
-            <div class="col-md-8">
-              <img src={data.image} class="img-fluid rounded-start"
+            <div className="col-md-8">
+              <img src={data.image} className="img-fluid rounded-start"
               style={{
                 width: "100%",
                 height: "80%",
@@ -37,7 +39,7 @@ const BlogPost = () => {
         </div>
         ))}
       </div>
-      {/* <hr class="solid"></hr> */}
+      {/* <hr className="solid"></hr> */}
 
       {/* post */}
 

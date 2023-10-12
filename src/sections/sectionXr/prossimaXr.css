@@ -1,31 +1,31 @@
 .textcardXr {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    flex-wrap: wrap;
-    align-items: start;
-    margin: auto;
-    width: 100%;
-    height: auto;
-  }
-  .textcardXr > * {
-    max-width: 32.75rem;
-    min-width: 5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.textcardXr > * {
+  max-width: 32.75rem;
+  min-width: 5rem;
+}
 
-  .cardCompXr {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-  }
+.cardCompXr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-  .textdecorationXr {
-    border-radius: 6.1875rem;
-    display: flex;
-    padding: 0.0625rem 1.03344rem 0.14938rem 1.04594rem;
-    justify-content: center;
-    align-items: flex-start;
-    color: var(--info-color);
-    background: var(--info-color-2);
-  }
+.textdecorationXr {
+  border-radius: 6.1875rem;
+  display: flex;
+  padding: 0.0625rem 1.03344rem 0.14938rem 1.04594rem;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--info-color);
+  background: var(--info-color-2);
+}

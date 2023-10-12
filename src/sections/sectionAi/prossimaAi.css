@@ -1,9 +1,9 @@
 .textcard {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;
   margin: auto;
   height: auto;
 }
@@ -15,12 +15,12 @@
 .cardComp {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-end;
 }
 .cardComp .col {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .textdecoration {
   border-radius: 6.1875rem;
