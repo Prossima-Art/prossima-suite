@@ -128,7 +128,7 @@ const Navbar = () => {
     ],
     Resources: [
       {
-        name: "Research and Dissemination",
+        name: "Blog",
         description: "News and articles about products and services",
         href: "/BlogHome",
       },
