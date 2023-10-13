@@ -1,10 +1,6 @@
 import React from "react";
 
-
-const BlogArticle = ({data}) => {
-  
- 
-
+const BlogArticle = ({ data }) => {
   return (
     <div>
       <img src={data.image} alt="random" />

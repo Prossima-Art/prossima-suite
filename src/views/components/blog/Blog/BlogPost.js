@@ -52,33 +52,3 @@ export const Blogdata = {
     },
   ],
 };
-
-// export const Blogdata = [
-//   {
-//   title: "My Secund Blog Post",
-//   subtitle: "This is my first blog post. Welcome to my blog!",
-//   author: "Prossima Art",
-//   date: "Outubro 11, 2023",
-//   content: "This is my first blog post. Welcome to my blog!",
-//   image:
-//     "https://images.unsplash.com/photo-1581726707445-75cbe4efc586?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
-//   tags: ["blogging", "first post"],
-//   button: "Read article",
-//   id: "4",
-//   href: "/article",
-// },
-// {
-//   title: "My Secund Blog Post",
-//   subtitle: "This is my first blog post. Welcome to my blog!",
-//   author: "Prossima Art",
-//   date: "Outubro 11, 2023",
-//   content: "This is my first blog post. Welcome to my blog!",
-//   image:
-//     "https://images.unsplash.com/photo-1581726707445-75cbe4efc586?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
-//   tags: ["blogging", "first post"],
-//   button: "Read article",
-//   id: "4",
-//   href: "/article",
-// },
-
-// ]

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Blogdata } from "./Blog/BlogPost";
 import { Link } from 'react-router-dom';
 
 
 const BlogPost = () => {
+  const [data, setData] = useState(Blogdata);
   return (
     <>
       {/* Destaque */}
