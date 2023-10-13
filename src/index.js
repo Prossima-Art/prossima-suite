@@ -11,6 +11,9 @@ import './index.css';
 import Security from './views/Security.tsx';
 import BlogView from './views/BlogView';
 import BlogArticle from './views/components/blog/Blog/BlogArticle';
+import BlogPost from './views/components/blog/BlogPost';
+import Navbar from './sections/navbar/navbar';
+import Footer from './sections/footer/footer';
 
 
 
@@ -30,12 +33,12 @@ const router = createBrowserRouter([
         
     },
     {
-        path: "/BlogArticle",
-        element: <BlogArticle />,
+        path: "/BlogArticle:id",
+        element: <BlogArticle component={BlogPost}/>,
     },
     {
         path: "/BlogHome",
-        element: <BlogView />,
+        element: <BlogView  />,
     },
     
     {
@@ -46,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
+        <Navbar/>
         <RouterProvider router={router} />
+        <Footer/>
     </React.StrictMode>
 );

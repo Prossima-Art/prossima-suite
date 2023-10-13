@@ -16,7 +16,7 @@ const BlogPost = () => {
                 <h5 className="card-title">{data.title}</h5>
                 <p className="card-text">{data.subtitle}</p>
                 <p className="card-text"><small className="text-muted">{data.date}</small></p>
-                <Link to={`/BlogArticle?id=${data.id}&image=${data.image}&title=${data.title}&subtitle=${data.subtitle}&content=${data.content}&date=${data.date}`} 
+                <Link to={`/BlogArticle?id=${data.id}`} 
                 className="link-primary"
                 style={{
                   textDecoration: "none",

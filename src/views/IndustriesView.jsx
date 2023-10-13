@@ -18,13 +18,11 @@ import {
   InfoTextSaaS,
   InfoTexthealthcare,
 } from "./components/industries/infoText/infoText";
-import Footer from "../sections/footer/footer";
-import Navbar from "../sections/navbar/navbar";
+
 
 function IndustriesView() {
   return (
     <>
-      <Navbar />
       <Hero />
       <section id="Ecommerce">
         <Ecommerce />
@@ -52,8 +50,6 @@ function IndustriesView() {
         <SaaS />
         <InfoTextSaaS />
       </section>
-
-      <Footer />
     </>
   );
 }
