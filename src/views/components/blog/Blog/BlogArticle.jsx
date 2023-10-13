@@ -1,14 +1,128 @@
 import React from "react";
+import { Blogdata } from "./BlogPost";
+import { useSearchParams } from "react-router-dom";
+import { useNavigate, createSearchParams, Link } from "react-router-dom";
 
-const BlogArticle = ({ data }) => {
+const BlogArticle = () => {
+  const [searchParams] = useSearchParams();
+
+  const getPostId = searchParams.get("id");
+  const filterPostById = Blogdata.Post.filter((e) => e.id === getPostId);
+
+  const replaceString = (str) => {
+    if (!str) return str;
+    return String(str).replaceAll("\n", "<br />");
+  };
   return (
     <div>
-      <img src={data.image} alt="random" />
-      <h1>Blog Article</h1>
-      <h2>{data.title}</h2>
-      <h5>{data.subtitle}</h5>
-      <small className="text-muted">{data.date}</small>
-      <p>{data.content}</p>
+      {filterPostById.map((data) => (
+        <div
+          key={data.id}
+          className="fuild-container"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h1 className="mt-5" id="title">{data.title}</h1>
+
+          <h5
+            className="mt-5"
+            style={{ marginBlockStart: "20%", marginInline: "20%" }}
+          >
+            {data.subtitle}
+          </h5>
+          <p className="text-muted">
+            {data.author} |<span className="fw-bold">{data.date} </span>
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "start",
+              alignItems: "start",
+            }}
+          >
+            <img
+              src={data.image}
+              style={{
+                width: "100%",
+                display: "flex",
+                objectFit: "cover",
+                aspectRatio: "18/6",
+              }}
+              alt="random"
+            />
+
+            <p
+              dangerouslySetInnerHTML={{ __html: replaceString(data.content) }}
+              className="mt-5 "
+              style={{
+                marginBlockStart: "20%",
+                marginInline: "20%",
+                height: "auto",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "start",
+                textAlign: "justify",
+                
+                
+              }}
+            ></p>
+          </div>
+        </div>
+      ))}
+
+      <hr></hr>
+      <h5 className="mx-5 p-5 fw-bold">Related articles</h5>
+
+      <div className="row g-4 mx-5 ">
+        {Blogdata.Post.map((data) => (
+          <div className="col-sm-3">
+            <div className="card mb-5 border-0 ">
+              <img
+                src={data.image}
+                className="img-fluid rounded-start"
+                style={{
+                  width: "100%",
+                  height: "80%",
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  
+                }}
+                alt="..."
+              />
+              <div className="card-body">
+                <p className="card-title">{data.title}</p>
+                <p className="card-text">
+                  <small className="text-muted">{data.date}</small>
+                </p>
+                <Link
+                target="_top"
+                
+                  to={{
+                    pathname: "/BlogArticle",
+                    search: `?${createSearchParams({
+                      id: data.id,
+                    })}`,
+                  }}
+                  className="link-primary"
+                  style={{
+                    textDecoration: "none",
+                    
+                    
+                  }}
+                >
+                  {data.button}
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
