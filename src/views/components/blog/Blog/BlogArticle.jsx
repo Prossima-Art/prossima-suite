@@ -80,7 +80,7 @@ const BlogArticle = () => {
       <h5 className="mx-5 p-5 fw-bold">Related articles</h5>
 
       <div className="row g-4 mx-5 ">
-        {Blogdata.Post.map((data) => (
+        {Blogdata.Post.slice(0, 4).map((data) => (
           <div className="col-sm-3">
             <div className="card mb-5 border-0 ">
               <img
@@ -91,6 +91,7 @@ const BlogArticle = () => {
                   height: "80%",
                   objectFit: "cover",
                   borderRadius: "10px",
+                  maxHeight: "150px",
                   
                 }}
                 alt="..."
