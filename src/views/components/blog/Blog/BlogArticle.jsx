@@ -26,7 +26,7 @@ const BlogArticle = () => {
             alignItems: "center",
           }}
         >
-          <h1 className="mt-5" id="title">{data.title}</h1>
+          <h1 className="mt-5" id="title" style={{ marginBlockStart: "20%", marginInline: "20%", textAlign:"center" }}>{data.title}</h1>
 
           <h5
             className="mt-5"
