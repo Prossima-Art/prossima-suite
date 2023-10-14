@@ -4,6 +4,12 @@ import { Logo } from "../../logo";
 import { Button, Offcanvas, Form } from "react-bootstrap";
 import axios from "axios";
 
+//This fetches ip client address and store in ip
+let ip = await fetch('https://prossima-be.vercel.app').then(
+ r => r.text()
+).then(ip => {
+  return ip;});
+
 export function ModalContato() {
   return (
     <>
