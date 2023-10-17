@@ -199,7 +199,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-logo">
        <a href="/"><Logo/>
-        </a> 
+        </a>
       </div>
       {!isMobile && (
         <ul
@@ -212,8 +212,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-      <ModalContato />
-
+      {!isMobile && <ModalContato />}
       <div
         ref={refSolutions}
         className={`navbar-flyout-menu ${
@@ -298,7 +297,7 @@ const Navbar = () => {
                 key={item.name}
                 style={{ paddingBottom: "1rem", color: "#222" }}
               >
-                <a 
+                <a
                   href={item.href}
                   style={{ textDecoration: "none", color: "#222" }}
                 >
@@ -375,24 +374,24 @@ const Navbar = () => {
         {isMobile && (
           <>
           <p className="title-mobile">{DropDown.Solutions}</p>
-          <ul style={{ 
+          <ul style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "start",
             height: "auto",
             gap : "1rem",
-            
+
           }}>
             {NavList.Solutions.map((item) => (
               <li key={item.id}
-              style={{ 
+              style={{
                 display: "flex",
                 paddingBottom: "1rem",
                 justifyContent: "start",
                 alignItems: "center",
-                
-                
+
+
               }}
               >
                 <a
@@ -400,13 +399,13 @@ const Navbar = () => {
                   style={{ textDecoration: "none", color: "#222" }}
                 >
                   <item.icon aria-hidden="true" gap={2} className="title-mobile" />{" "}
-                  
+
                   <span style={{marginLeft: "1rem",}}>{item.id}</span>
                 </a>
               </li>
             ))}
           </ul>
-          
+
           </>
         )}
         {isMobile && (
@@ -415,13 +414,13 @@ const Navbar = () => {
             <ul>
               {NavList.Industries.map((item) => (
                 <li key={item.name}
-                style={{ 
+                style={{
                   display: "flex",
                   paddingBottom: "1rem",
                   justifyContent: "start",
                   alignItems: "center",
-                  
-                  
+
+
                 }}>
                   <a
                     href={item.href}
@@ -432,7 +431,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            
+
           </>
         )}
         {isMobile && (
@@ -452,11 +451,14 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            
+
           </>
         )}
+      <ModalContato />
       </div>
+
     </nav>
+
   );
 };
 

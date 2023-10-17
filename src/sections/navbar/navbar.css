@@ -8,7 +8,7 @@
   color: black;
   top: 0;
   grid-template-columns: 20rem 1fr 2fr 1fr 10rem;
- 
+
   width: 99vw;
 }
 
@@ -166,12 +166,16 @@
 
 @media (max-width: 767px) {
   .navbar {
-    display: grid;
-    grid-template-columns: 2rem 6fr 6fr 0rem;
-    padding: 1rem 2rem;
+    display: flex;
+    padding-inline: 1rem;
+    padding-block: 1rem 0;
+  }
+  .navbar-logo {
+    width: auto;
+    padding-block-end: 0.5rem;
   }
   .hamburger-menu {
-    display: grid;
+    display: contents;
   }
   .hamburger-menu .hamburger-menu-item ul {
     display: grid;
@@ -186,7 +190,8 @@
     display: none;
   }
   .navbar-contact-btn {
-    display: none;
+    display: auto;
+    width: 100%;
   }
 }
 .title-mobile {
