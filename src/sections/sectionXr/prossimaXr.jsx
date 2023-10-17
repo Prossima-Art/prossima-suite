@@ -14,7 +14,7 @@ export default class ProssimaXr extends Component {
             <p className='paragrafo'> Embrace the future of enterprise and stay ahead of the competition. Revolutionize the way you work, communicate, and innovate, and unlock a world of endless possibilities for your business.</p>
           </Col>
           <Col xs={12} md={6} sm={12}>
-            <Image className="imgDev" src={Card} alt="prossima ai logo" fluid />
+            <Image className="imgDev" src={Card} alt="prossima ai logo" loading='lazy' fluid />
           </Col>
         </Row>
       </Container>

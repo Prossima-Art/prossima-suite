@@ -357,7 +357,7 @@ export const InfoTextSaaS = () => {
     <Container>
       <Row className="infoRow">
         <Col>
-          <img src={SaaSDev} alt="Dev" className="dev" />
+          <img src={SaaSDev} alt="Dev" loading='lazy' className="dev" />
           <p className="subtitle">Web development</p>
           <p className="smalltext">
             With web development, companies can create robust and scalable
@@ -367,7 +367,7 @@ export const InfoTextSaaS = () => {
           </p>
         </Col>
         <Col>
-          <img src={SaaSUx} alt="Ux tecnologies" className="dev" />
+          <img src={SaaSUx} alt="Ux tecnologies" loading='lazy' className="dev" />
           <p className="subtitle">UI/UX Design</p>
           <p className="smalltext">
             UI/UX design plays a pivotal role in enhancing user satisfaction and
@@ -376,7 +376,7 @@ export const InfoTextSaaS = () => {
             workflows, and simplify complex processes, resulting in increased
             user adoption and engagement.
           </p>
-          <img src={SaaSAi} alt="Ai tecnologies" className="dev" />
+          <img src={SaaSAi} alt="Ai tecnologies" loading='lazy' className="dev" />
           <p className="subtitle">AI technologies</p>
           <p className="smalltext">
             AI technologies, such as machine learning and natural language
@@ -388,7 +388,7 @@ export const InfoTextSaaS = () => {
           </p>
         </Col>
         <Col>
-          <img src={SaaSVr} alt="Vr tecnologies" className="dev" />
+          <img src={SaaSVr} alt="Vr tecnologies" loading='lazy' className="dev" />
           <p className="subtitle">XR Tools</p>
           <p className="smalltext">
             XR tools, including Virtual Reality (VR), Augmented Reality (AR),

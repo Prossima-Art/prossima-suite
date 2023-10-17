@@ -9,7 +9,7 @@ export default class ProssimaAi extends Component {
       <Container fluid className="cardComp my-5 pb-5" xs={12}>
         <Row className="mx-auto">
           <Col xs={12} md={6} sm={12}>
-            <Image className="imgAi" src={Card} alt="prossima ai logo" fluid />
+            <Image className="imgAi" src={Card} alt="prossima ai logo" loading='lazy' fluid />
           </Col>
           <Col className="textcard" xs={12} md={6} sm={12}>
             <span className='textdecoration'>AI & ML Solutions for Business</span>

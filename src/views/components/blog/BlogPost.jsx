@@ -48,6 +48,7 @@ const BlogPost = () => {
                         borderRadius: "10px",
                       }}
                       alt="..."
+                      loading='lazy'
                     />
                   </div>
                 </div>
@@ -72,6 +73,7 @@ const BlogPost = () => {
                 
               }}
               alt="..."
+              loading='lazy'
             />
             <div className="card-body">
               <Link

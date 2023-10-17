@@ -9,7 +9,7 @@ export default class ProssimaUx extends Component {
       <Container fluid className="cardCompUx my-5 pb-5" xs={12} >
         <Row className="mx-auto">
           <Col xs={12} md={6} sm={12}>
-            <Image className="imgDev" src={Card} alt="prossima ai logo" fluid />
+            <Image className="imgDev" src={Card} alt="prossima ai logo" loading='lazy' fluid />
           </Col>
           <Col className="textcardUx">
             <span className='textdecorationUx'>UI / UX Design</span>
