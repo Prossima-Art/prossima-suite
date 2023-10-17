@@ -212,7 +212,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-      <ModalContato/>
+      <ModalContato />
 
       <div
         ref={refSolutions}
@@ -406,6 +406,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          
           </>
         )}
         {isMobile && (
@@ -431,6 +432,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            
           </>
         )}
         {isMobile && (
@@ -450,6 +452,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            
           </>
         )}
       </div>

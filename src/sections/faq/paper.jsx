@@ -7,7 +7,7 @@ export default class Paper extends Component {
   render() {
     return (
       <Container className="PaperComp">
-        <Row className="boxShadow p-2">
+        <Row className="boxShadow p-2 md-2">
           <Col  className="mediumLogo " xs={1}>
             <img
               className="mediumLogo"

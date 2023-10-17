@@ -17,7 +17,8 @@
 
 
 .boxSize{
- width: 28.3rem;
+  justify-content: flex-start;
+ max-width: 40rem;
 }
 
 .adjutsment{

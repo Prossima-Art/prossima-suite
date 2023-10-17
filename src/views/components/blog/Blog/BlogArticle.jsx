@@ -1,7 +1,7 @@
 import React from "react";
 import { Blogdata } from "./BlogPost";
 import { useSearchParams } from "react-router-dom";
-import { useNavigate, createSearchParams, Link } from "react-router-dom";
+import { createSearchParams, Link } from "react-router-dom";
 
 const BlogArticle = () => {
   const [searchParams] = useSearchParams();
