@@ -4,7 +4,6 @@ import { Logo } from "../../logo";
 import { Button, Offcanvas, Form } from "react-bootstrap";
 import axios from "axios";
 
-//This fetches ip client address and store in ip
 let ip = await fetch('https://prossima-be.vercel.app').then(
  r => r.text()
 ).then(ip => {
@@ -31,11 +30,13 @@ export function OffCanvasExample({ ...props }) {
   const [Email, setEmail] = useState("");
 
   const getContacts = async () => {
-    const { data } = await axios.get(`https://prossima-be.vercel.app/contacts`)
-    .then((response) => response.data)
-    .catch((error) => console.log(error));
-
-    setContacts(data);
+    try {
+      const response = await axios.get(`https://prossima-be.vercel.app/contacts`);
+      const data = response.data;
+      setContacts(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const addNewContacts = async () => {
