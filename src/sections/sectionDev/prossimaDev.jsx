@@ -14,7 +14,7 @@ export default class ProssimaDev extends Component {
             <p className='paragrafo'> We work closely with you to understand your unique needs and objectives, and then create custom websites that are visually appealing, user-friendly, and fully functional.</p>
           </Col>
           <Col xs={12} md={6} sm={12}>
-            <Image className="imgDev" src={Card} alt="prossima ai logo" fluid />
+            <Image className="imgDev" src={Card} alt="prossima ai logo" loading='lazy' fluid />
           </Col>
         </Row>
       </Container>

@@ -54,6 +54,7 @@ const BlogArticle = () => {
                 aspectRatio: "18/6",
               }}
               alt="random"
+              loading='lazy'
             />
 
             <p
@@ -95,6 +96,7 @@ const BlogArticle = () => {
                   
                 }}
                 alt="..."
+                loading='lazy'
               />
               <div className="card-body">
                 <p className="card-title">{data.title}</p>

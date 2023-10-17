@@ -15,6 +15,7 @@ export default class Paper extends Component {
               width={33}
               height={34}
               alt="medium logo"
+              loading='lazy'
             /></Col>
             <Col className="boxSize">
             <p className="paragrafoBlack">
@@ -35,6 +36,7 @@ export default class Paper extends Component {
               width={33}
               height={34}
               alt="medium logo"
+              loading='lazy'
             /></Col>
             <Col className="boxSize">
             <p className="paragrafoBlack">
@@ -53,6 +55,7 @@ export default class Paper extends Component {
               width={33}
               height={34}
               alt="medium logo"
+              loading='lazy'
             /></Col>
             <Col className="boxSize">
             <p className="paragrafoBlack">
