@@ -10,7 +10,7 @@ export default class ProssimaXr extends Component {
         <Row className="mx-auto">
           <Col className="textcardXr">
             <span className='textdecorationXr'>VR/ AR Applications</span>
-            <p className="subtitle"> Elevating Business Experiences with Immersive Applications</p>
+            <h1 className="subtitle"> Elevating Business Experiences with Immersive Applications</h1>
             <p className='paragrafo'> Embrace the future of enterprise and stay ahead of the competition. Revolutionize the way you work, communicate, and innovate, and unlock a world of endless possibilities for your business.</p>
           </Col>
           <Col xs={12} md={6} sm={12}>

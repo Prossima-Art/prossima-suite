@@ -13,7 +13,7 @@ export default class ProssimaAi extends Component {
           </Col>
           <Col className="textcard" xs={12} md={6} sm={12}>
             <span className='textdecoration'>AI & ML Solutions for Business</span>
-            <p className="subtitle"> Empowering Business with AI & ML Solutions</p>
+            <h1 className="subtitle"> Empowering Business with AI & ML Solutions</h1>
             <p className='paragrafo'> Prossima AI offers a complete and seamless API service, data analytics, sales performance service for cross-site interactions and sales and delivery platforms.</p>
           </Col>
         </Row>

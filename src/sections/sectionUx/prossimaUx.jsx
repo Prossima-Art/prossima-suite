@@ -13,7 +13,7 @@ export default class ProssimaUx extends Component {
           </Col>
           <Col className="textcardUx">
             <span className='textdecorationUx'>UI / UX Design</span>
-            <p className="subtitle"> Crafting Intuitive and Engaging User Experiences</p>
+            <h1 className="subtitle"> Crafting Intuitive and Engaging User Experiences</h1>
             <p className='paragrafo'> By prioritizing user-centric design principles, we help businesses unlock their full potential and deliver exceptional digital experiences that leave a lasting impression.</p>
           </Col>
         </Row>

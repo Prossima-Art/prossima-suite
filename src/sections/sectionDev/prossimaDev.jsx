@@ -10,7 +10,7 @@ export default class ProssimaDev extends Component {
         <Row className="mx-auto">
           <Col className="textcardDev">
             <span className='textdecorationDev'>Websites Development</span>
-            <p className="subtitle"> Driving Business Growth through Powerful Website Development Solutions</p>
+            <h1 className="subtitle"> Driving Business Growth through Powerful Website Development Solutions</h1>
             <p className='paragrafo'> We work closely with you to understand your unique needs and objectives, and then create custom websites that are visually appealing, user-friendly, and fully functional.</p>
           </Col>
           <Col xs={12} md={6} sm={12}>
